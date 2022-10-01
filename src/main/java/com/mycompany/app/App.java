@@ -22,7 +22,7 @@ public class App {
         } else if ( fortune == 5 ) {
             System.out.println("SUSSY SUS SUS?");
         } else if ( fortune == 6 ) {
-            System.out.println("im too tired to write the rest of the code");
+            System.out.println("credo in amogum et impostores suspectos");
         } else if ( fortune == 7 ) {
             System.out.println("im too tired to write the rest of the code");
         } else if ( fortune == 8 ) {
