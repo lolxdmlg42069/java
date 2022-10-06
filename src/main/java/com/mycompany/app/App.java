@@ -3,36 +3,75 @@
  * Licensed under the MIT License. See LICENSE in the project root for license information.
  *---------------------------------------------------------------------------------------*/
 import java.util.*;
+import java.math.*;
 
 package com.mycompany.app;
 
 public class App {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Random rand = new Random();
-        int fortune = 1 + rand.nextInt(10);
-        if ( fortune == 1 ) {
-            System.out.println("my sources tell me that you are sus");
-        } else if ( fortune == 2 ) {
-            System.out.println("are you gay!?");
-        } else if ( fortune == 3 ) {
-            System.out.println("b-baka!");
-        } else if ( fortune == 4 ) {
-            System.out.println("amogus");
-        } else if ( fortune == 5 ) {
-            System.out.println("SUSSY SUS SUS?");
-        } else if ( fortune == 6 ) {
-            System.out.println("credo in amogum et impostores suspectos");
-        } else if ( fortune == 7 ) {
-            System.out.println("im too tired to write the rest of the code");
-        } else if ( fortune == 8 ) {
-            System.out.println("im too tired to write the rest of the code");
-        } else if ( fortune == 9 ) {
-            System.out.println("im too tired to write the rest of the code");
-        } else if ( fortune == 10 ) {
-            System.out.println("im too tired to write the rest of the code");
-        } else {
-            System.out.println("STOP TRYING TO HACK MY PROGRAM");
+        System.out.println("Enter the filing status: ");
+        int status = input.nextInt();
+        System.out.println("Enter the taxable income: ");
+        double income = input.nextDouble();
+        double tax;
+        if ( status == 0 ) {
+            if ( income <= 8350 ) {
+                tax = income - ( income * 0.10 );
+            } else if ( income <= 33950 ) {
+                tax = income - ( income * 0.15 );
+            } else if ( income <= 82250 ) {
+                tax = income - ( income * 0.25 );
+            } else if ( income <= 171550 ) {
+                tax = income - ( income * 0.28 );
+            } else if ( income <= 372950 ) {
+                tax = income - ( income * 0.33 );
+            } else if ( income >= 372951 ) {
+                tax = income - ( income * 0.35 );
+            }
+        } else if ( status == 1 ) {
+            if ( income <= 16700 ) {
+                tax = income - ( income * 0.10 );
+            } else if ( income <= 67900 ) {
+                tax = income - ( income * 0.15 );
+            } else if ( income <= 137050 ) {
+                tax = income - ( income * 0.25 );
+            } else if ( income <= 208850 ) {
+                tax = income - ( income * 0.28 );
+            } else if ( income <= 372950 ) {
+                tax = income - ( income * 0.33 );
+            } else if ( income >= 372951 ) {
+                tax = income - ( income * 0.35 );
+            }
+        } else if ( status == 2 ) {
+            if ( income <= 8350 ) {
+                tax = income - ( income * 0.10 );
+            } else if ( income <= 33950 ) {
+                tax = income - ( income * 0.15 );
+            } else if ( income <= 68525 ) {
+                tax = income - ( income * 0.25 );
+            } else if ( income <= 104425 ) {
+                tax = income - ( income * 0.28 );
+            } else if ( income <= 186475 ) {
+                tax = income - ( income * 0.33 );
+            } else if ( income >= 186476 ) {
+                tax = income - ( income * 0.35 );
+            }
+        } else if ( status == 3 ) {
+            if ( income <= 11950 ) {
+                tax = income - ( income * 0.10 );
+            } else if ( income <= 45500 ) {
+                tax = income - ( income * 0.15 );
+            } else if ( income <= 117450 ) {
+                tax = income - ( income * 0.25 );
+            } else if ( income <= 190200 ) {
+                tax = income - ( income * 0.28 );
+            } else if ( income <= 372950 ) {
+                tax = income - ( income * 0.33 );
+            } else if ( income >= 372951 ) {
+                tax = income - ( income * 0.35 );
+            }
         }
+        System.out.println("Tax is " + tax);
     }
 }
